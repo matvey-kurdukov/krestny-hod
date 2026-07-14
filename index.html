@@ -112,29 +112,32 @@
   .divider::after{background:linear-gradient(90deg,currentColor,transparent);}
   .divider span{width:5px;height:5px;transform:rotate(45deg);background:currentColor;}
 
-  /* ---------- links (compact pills, hug content) ---------- */
+  /* ---------- links (full-width plates) ---------- */
   .links{
+    width:100%;
     display:flex;
     flex-direction:column;
-    align-items:center;
-    gap:clamp(11px,3vw,14px);
+    gap:12px;
   }
 
   .row{
-    display:inline-flex;
+    width:100%;
+    display:flex;
     align-items:center;
+    justify-content:center;
     gap:13px;
-    padding:11px 26px 11px 13px;
-    border-radius:999px;
+    min-height:64px;
+    padding:12px 20px;
+    border-radius:18px;
     background:var(--card);
     border:1px solid var(--line);
     text-decoration:none;
     color:var(--ink);
     box-shadow:0 8px 22px -14px rgba(90,78,54,.35);
-    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
+  .row:active{transform:scale(.98);}
   .row:hover,.row:focus-visible{
-    transform:translateY(-2px);
     border-color:var(--gold-soft);
     box-shadow:0 14px 30px -14px rgba(120,98,52,.45);
     outline:none;
@@ -143,7 +146,7 @@
 
   .badge{
     flex:0 0 auto;
-    width:44px;height:44px;
+    width:42px;height:42px;
     border-radius:50%;
     background:var(--icon-bg);
     display:flex;align-items:center;justify-content:center;
@@ -152,7 +155,7 @@
   .badge svg{width:22px;height:22px;fill:currentColor;}
 
   .name{
-    font-size:1.04rem;
+    font-size:1.08rem;
     font-weight:600;
     letter-spacing:.01em;
     white-space:nowrap;
